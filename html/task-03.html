@@ -18,7 +18,8 @@
   ];
 
   const gallery = document.querySelector('.gallery');
-  const img = document.createElement('img');
+  const img = document.querySelector('img');
+console.log(img.url)
   img.src = 'image.jpeg';
   document.body.appendChild(img);
    const dom = images
@@ -28,6 +29,6 @@
   </li>`)
   .join('');
    
-   gallery.insertAdjacentHTML('beforeend', dom);
+
 </script>
 
