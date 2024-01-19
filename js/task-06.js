@@ -1,11 +1,18 @@
-const inputValid = document.getElementById('#validation-input');
+const inputValid = document.querySelector('#validation-input');
+const maxLength = inputValid.getAttribute('data-length');
+
+inputValid.addEventListener('click',() => {
+inputValid.focus();
+});
 inputValid.addEventListener("blur", () => {
-    if(inputValid.length === Number(inputValid.data-length.length)) {
-        input.classList.add('valid');
-        input.classList.remove('invalid');
+    if(inputValid.value.length === +maxLength) {
+        
+        inputValid.classList.remove(...inputValid.classList);
+        inputValid.classList.add('valid');
     } else {
-        input.classList.add('invalid');
-        input.classList.remove('valid');
+        
+        inputValid.classList.remove(...inputValid.classList); 
+       inputValid.classList.add('invalid');
     }
 });
 

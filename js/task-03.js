@@ -13,16 +13,12 @@ const images = [
     },
   ];
 
-  const gallery = document.querySelector('.gallery');
-  const img = document.querySelector('img');
-console.log(img.url)
-  img.src = 'image.jpeg';
-  document.body.appendChild(img);
-   const dom = images
-   .map((image) => 
-`<li>
-  <img src = '${images.url}' alt = '${images.alt}'/>
-  </li>`)
-  .join('');
+  const galleryImage = document.querySelector('.gallery');
+  images.forEach((image) => {
+    galleryImage.insertAdjacentHTML('beforeend', `<li>
+    <img src = '${image.url}' alt = '${image.alt}'/>
+    </li>`)
+  });
    
+  
 
